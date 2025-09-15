@@ -1,6 +1,6 @@
 # Virus Pfirsich
 
-## https://lukk12.github.io/virus-website/
+## https://lukk12.github.io/virus-website/index.html
 
 Dies ist eine kleine **Werbe-Webseite** für das fiktive Produkt *Virus Pfirsich* – einen erfrischenden Eistee in der Sorte Pfirsich (Zero Sugar).  
 Die Seite ist als **Design-Demo** gedacht und dient nur zu Präsentationszwecken.
