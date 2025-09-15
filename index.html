@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Virus Pfirsich — Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg-1: #ffd7b8;
+      --bg-2: #ffb07a;
+      --accent: #ff6e3a;
+      --muted: #6b5a59;
+      --glass: rgba(255,255,255,0.12);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:linear-gradient(135deg,var(--bg-1),var(--bg-2));color:#fff;}
+
+    .hero{min-height:100vh;display:grid;grid-template-columns:1fr 560px;align-items:center;padding:48px;gap:32px}
+
+    .brand-wrap{position:relative;padding-left:8px}
+    .brand-main{
+      font-family:Oswald,Impact,system-ui,Arial;
+      font-weight:700;
+      font-size:96px;
+      line-height:0.8;
+      letter-spacing:2px;
+      color:rgba(255,255,255,0.95);
+      text-transform:uppercase;
+      margin:0 0 8px 0;
+      transform:translateY(-8px);
+      text-shadow:0 6px 18px rgba(0,0,0,0.12);
+    }
+    .brand-sub{font-family:Oswald,Inter;font-size:42px;color:rgba(255,255,255,0.9);text-transform:uppercase;margin:0}
+
+    .marketing{
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      border-radius:20px;padding:28px;backdrop-filter: blur(6px);box-shadow:0 12px 40px rgba(0,0,0,0.12);
+      display:flex;flex-direction:column;gap:18px;color:#fff;align-items:flex-start
+    }
+    .kicker{font-size:14px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.85)}
+    .title{font-size:36px;margin:0;line-height:1.05}
+    .desc{color:rgba(255,255,255,0.92);opacity:0.95;font-size:16px;max-width:38ch}
+
+    .product-card{width:100%;display:flex;align-items:center;gap:20px}
+    .product-visual{flex:0 0 240px;display:grid;place-items:center}
+    .product-visual img{max-width:100%;border-radius:14px;box-shadow:0 18px 40px rgba(0,0,0,0.18);}
+
+    .product-info{flex:1}
+    .price{font-weight:700;font-size:28px;margin-top:6px}
+    .cta{margin-top:18px}
+    .btn{
+      display:inline-block;padding:12px 20px;border-radius:12px;background:linear-gradient(90deg,var(--accent),#ff8e5c);color:#fff;font-weight:700;text-decoration:none;box-shadow:0 10px 30px rgba(255,110,58,0.26);
+    }
+
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.12);font-weight:600;color:#fff;margin-right:8px}
+
+    section{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:60px 20px;text-align:center;opacity:0;transform:translateY(40px);transition:all 0.8s ease-out}
+    section.visible{opacity:1;transform:translateY(0)}
+    section h2{font-size:42px;margin-bottom:16px;font-family:Oswald;text-transform:uppercase}
+    section p{max-width:720px;font-size:18px;line-height:1.6;color:rgba(255,255,255,0.92)}
+    section img{max-width:420px;border-radius:18px;box-shadow:0 14px 30px rgba(0,0,0,0.18);margin-top:24px}
+
+    footer{text-align:center;padding:40px 20px;color:rgba(255,255,255,0.8);font-size:14px}
+
+    /* Responsive Design */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;padding:28px}
+      .brand-main{font-size:72px}
+      .hero .marketing{order:2}
+      .product-visual{justify-self:center}
+    }
+    @media (max-width:768px){
+      .product-card{flex-direction:column;text-align:center}
+      .product-info{text-align:center}
+      .cta{display:flex;justify-content:center}
+    }
+    @media (max-width:480px){
+      .brand-main{font-size:48px}
+      .brand-sub{font-size:22px}
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <header class="brand-wrap">
+      <h1 class="brand-main">Virus</h1>
+      <h2 class="brand-sub">Pfirsich</h2>
+    </header>
+
+    <main class="marketing" role="main" aria-label="Produktmarketing">
+      <div>
+        <div class="kicker">Erfrischend • Leicht • Zero Sugar</div>
+        <h3 class="title">Virus Pfirsich — Der leichte Eistee</h3>
+        <p class="desc">Erlebe intensiven Pfirsichgeschmack ohne Zuckerzusatz. Fruchtig, spritzig und perfekt für heiße Tage. Jetzt probieren — kalorienarm und unwiderstehlich.</p>
+      </div>
+
+      <div class="product-card">
+        <div class="product-visual">
+          <img src="produktbild1.png" alt="Produktbild Virus Pfirsich"/>
+        </div>
+
+        <div class="product-info">
+          <div>
+            <span class="badge">Zero Sugar</span>
+            <span class="badge">Pfirsich</span>
+          </div>
+          <div class="price">Ab 1,49 €</div>
+          <div class="cta">
+            <a class="btn" href="order_error.html">Jetzt kaufen</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <section style="background:rgba(255,255,255,0.05)">
+    <h2>Warum Virus Pfirsich?</h2>
+    <p>Unsere Zero Sugar Rezeptur sorgt für erfrischenden Geschmack ohne schlechtes Gewissen. Perfekt für aktive Menschen, die Wert auf Genuss und Lifestyle legen.</p>
+    <img src="produktbild2.png" alt="Virus Pfirsich Szene" />
+  </section>
+
+  <section>
+    <h2>Immer dabei</h2>
+    <p>Egal ob beim Sport, in der Uni oder beim Chillen mit Freunden – Virus Pfirsich ist der perfekte Begleiter. Kühl genießen für maximalen Frischekick!</p>
+    <img src="produktbild3.png" alt="Virus Pfirsich unterwegs" />
+  </section>
+
+  <section style="background:rgba(255,255,255,0.05)">
+    <h2>Zero Sugar • 100% Geschmack</h2>
+    <p>Ein Eistee, der dich nicht ausbremst. Genieße vollen Pfirsichgeschmack, während du bewusst auf Zucker verzichtest.</p>
+    <img src="produktbild4.png" alt="Virus Pfirsich Zero Sugar" />
+  </section>
+
+  <footer>
+    Werbung | GitHub: 
+    <a href="http://bit.ly/47EB0YF" target="_blank" style="color:inherit; text-decoration:underline;">
+      http://bit.ly/47EB0YF
+    </a> 
+    · © 2025 Virus Drinks
+  </footer>
+
+  
+  <script>
+    // IntersectionObserver für Scroll-Animation
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add("visible");
+        }
+      });
+    }, {threshold:0.2});
+
+    sections.forEach(sec=>observer.observe(sec));
+  </script>
+</body>
+</html>
+
+
+
+
